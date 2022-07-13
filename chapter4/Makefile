@@ -65,11 +65,11 @@ plot_simVsIm: $(SCR)/plot_trueVsSim.R
 	$(RSCRIPT) $< $(target) 16
 
 help:
-	@echo "make para_space:	  setup 100 true parameters."	
-	@echo "make gill100:	    100 gillespie simulations."	
-	@echo "make gsam100:	    run 100 simulation to obtain para estimates"
-	@echo "make rm_gap:	      remove the gaps from simulated seqs"
-	@echo "make gimp100:  	  run importance sampling algo in 100 non-gap seqs to obtain para estimates"
+	@echo "make para_space:	  generate 100 parameter sets as our true values."	
+	@echo "make gill100:	    run 100 gillespie simulations to generate 100x500 alignments."	
+	@echo "make gsam100:	    run EM on generated alignments to obtain para estimates"
+	@echo "make rm_gap:	      remove the gaps from simulated alignments"
+	@echo "make gimp100:  	  run importance sampling algo on non-gap alignments to obtain para estimates"
 	@echo "make plot_sim:  	  plot the true vs sim estimates" 
 	@echo "make plot_im:  	  plot the true vs im estimates"
 	@echo "make plot_simVsIm: plot the sim vs im estimates"
